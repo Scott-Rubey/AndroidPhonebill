@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPhonecallActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/content_main" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/customerHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="93dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="257dp"
+            android:text="@string/customer"
+            app:layout_anchor="@+id/linearLayout"
+            app:layout_anchorGravity="start|center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/customerTextBox"
+            android:layout_width="231dp"
+            android:layout_height="39dp"
+            android:layout_alignLeft="@id/customerHeading"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="90dp"
+            android:hint="@string/customer"
+            style="@android:style/Widget.EditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customerHeading" />
+
+        <TextView
+            android:id="@+id/callerHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="93dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="282dp"
+            android:text="@string/callerHeading"
+            app:layout_anchor="@+id/linearLayout"
+            app:layout_anchorGravity="start|center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/customerTextBox" />
+
+        <EditText
+            android:id="@+id/callerTextBox"
+            android:layout_width="231dp"
+            android:layout_height="39dp"
+            android:layout_alignLeft="@id/callerHeading"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="90dp"
+            android:hint="@string/phoneHint"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/callerHeading" />
+
+        <TextView
+            android:id="@+id/calleeHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="93dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="279dp"
+            android:text="@string/calleeHeading"
+            app:layout_anchor="@+id/linearLayout"
+            app:layout_anchorGravity="start|center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/callerTextBox" />
+
+        <EditText
+            android:id="@+id/calleeTextBox"
+            android:layout_width="231dp"
+            android:layout_height="39dp"
+            android:layout_alignLeft="@id/calleeHeading"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="90dp"
+            android:hint="@string/phoneHint"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calleeHeading" />
+
+        <TextView
+            android:id="@+id/startTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="93dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="279dp"
+            android:text="@string/startTimeHeading"
+            app:layout_anchor="@+id/linearLayout"
+            app:layout_anchorGravity="start|center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calleeTextBox" />
+
+        <EditText
+            android:id="@+id/startDateTextBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/calleeHeading"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="90dp"
+            android:hint="@string/dateHint"
+            android:inputType="date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/startTime" />
+
+        <EditText
+            android:id="@+id/startTimeTextBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/calleeHeading"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:hint="@string/timeHint"
+            android:inputType="time"
+            app:layout_constraintStart_toEndOf="@+id/startDateTextBox"
+            app:layout_constraintTop_toBottomOf="@+id/startTime" />
+
+        <EditText
+            android:id="@+id/startSuffixTextBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/calleeHeading"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:hint="@string/suffixHint"
+            android:inputType="text"
+            app:layout_constraintStart_toEndOf="@+id/startTimeTextBox"
+            app:layout_constraintTop_toBottomOf="@+id/startTime" />
+
+        <TextView
+            android:id="@+id/endTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="93dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="279dp"
+            android:text="@string/endTimeHeading"
+            app:layout_anchor="@+id/linearLayout"
+            app:layout_anchorGravity="start|center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/startDateTextBox" />
+
+        <EditText
+            android:id="@+id/endDateTextBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/calleeHeading"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="90dp"
+            android:hint="@string/dateHint"
+            android:inputType="date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/endTime" />
+
+        <EditText
+            android:id="@+id/endTimeTextBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/calleeHeading"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:hint="@string/timeHint"
+            android:inputType="time"
+            app:layout_constraintStart_toEndOf="@+id/startDateTextBox"
+            app:layout_constraintTop_toBottomOf="@+id/endTime" />
+
+        <EditText
+            android:id="@+id/endSuffixTextBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/calleeHeading"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:hint="@string/suffixHint"
+            android:inputType="text"
+            app:layout_constraintStart_toEndOf="@+id/startTimeTextBox"
+            app:layout_constraintTop_toBottomOf="@+id/endTime" />
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="568dp"
+            android:layout_marginEnd="106dp"
+            android:layout_marginBottom="119dp"
+            android:text="@string/submit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
